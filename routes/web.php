@@ -17,4 +17,6 @@ use App\Http\Controllers\MotelController;
 
 Route::get('/', [MotelController::class, 'index'])->name('motels.index');
 Route::post('/store', [MotelController::class, 'store'])->name('motels.store');
+Route::delete('/destroy', [MotelController::class, 'destroy'])->name('motels.destroy');
+
 

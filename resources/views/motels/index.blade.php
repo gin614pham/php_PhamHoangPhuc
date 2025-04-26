@@ -83,6 +83,20 @@
                     </table>
                 </div>
                 <!-- Form list end -->
+                <!-- Button delete -->
+                <form action="{{ route('motels.destroy') }}" method="POST" id="deleteForm">
+                    @csrf
+                    @method('DELETE')
+                    <input type="hidden" name="ids" id="ids">
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">
+                        Xoá
+                    </button>
+                </form>
+
+                <!-- Button delete end -->
+                <!-- Model delete -->
+                @include('motels.delete')
+                <!-- Model delete end -->
                 <!-- Model create -->
                 @include('motels.create')
 
